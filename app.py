@@ -20,6 +20,14 @@ def foodexp_pred():
     q = float(request.form.get("q"))
     return(render_template("foodexp_pred.html",r=(q*0.4851)+147.4))
 
+@app.route("/foodexp_frontend1",methods=["POST","GET"])
+def foodexp_frontend1():
+    return(render_template("foodexp_frontend1.html"))
+
+@app.route("/foodexp_frontend2",methods=["POST","GET"])
+def foodexp_frontend2():
+    return(render_template("foodexp_frontend2.html"))
+
 @app.route("/ethical_test",methods=["POST","GET"])
 def ethical_test():
     return(render_template("ethical_test.html"))
